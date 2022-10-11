@@ -1,0 +1,535 @@
+/* we use both bootstrap & our own styling*/
+
+html {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+header,
+footer {
+    background-color: black;
+}
+
+.grid-container .details:hover,
+.buy:hover,
+h2 {
+    background-color: rgb(0, 0, 0);
+}
+
+.grid-container .details,
+.cartItems>li,
+#productPage section {
+    background-color: black;
+}
+
+body,
+.grid-container,
+.grid-container>section,
+#cartPage {
+    background-color: #fdf9f6;
+    /*off white*/
+}
+
+body,
+a,
+#cartPage li {
+    color: #ffffff;
+    /*brown*/
+}
+
+body,
+.grid-container>section {
+    margin: 0;
+}
+
+body,
+.grid-container>section,
+footer ul {
+    padding: 0;
+}
+
+header,
+.grid-container section img,
+footer {
+    width: 100%;
+}
+
+body>header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+nav {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav h1 {
+    color: white;
+    display: block;
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+body>header ul,
+#cartPage {
+    right: 0;
+}
+
+body>header ul,
+.cartItems>li,
+#productPage section {
+    display: flex;
+    gap: 2rem;
+    /* display: flex to set the header navbar horizontally not vertically*/
+}
+
+body>header ul {
+    justify-content: flex-end;
+    /*to move the header nav bar to right*/
+    top: 27px;
+    margin: 20px 30px;
+}
+
+body>header ul .link-style {
+    margin-left: 13px;
+    padding-top: 35px;
+}
+
+html,
+.search-icon,
+.login-icon,
+.cart-icon,
+.grid-container section,
+.cartItems>li,
+#productPage section {
+    position: relative;
+}
+
+header ul,
+.search-icon::before,
+.login-icon::before,
+.cart-icon::before,
+.overlay,
+#close {
+    position: absolute;
+}
+
+#productPage,
+#cartPage {
+    position: fixed;
+}
+
+.search-icon::before,
+.login-icon::before,
+.cart-icon::before {
+    font-family: "Font Awesome 5 Free";
+    top: 8px;
+    left: 10px;
+    font-size: 22px;
+}
+
+.search-icon::before {
+    content: "\f002";
+}
+
+.login-icon::before {
+    content: "\f007";
+}
+
+.cart-icon::before {
+    content: "\f07a";
+    left: 2px;
+}
+
+.search-icon:hover,
+.login-icon:hover,
+.cart-icon:hover,
+a:hover,
+button:hover {
+    color: rgb(115, 255, 0);
+    text-decoration: none;
+}
+
+#searchbar,
+.custom-select,
+.nav-footer-col {
+    display: inline-block;
+}
+
+#searchbar,
+.custom-select {
+    margin: 3px;
+    vertical-align: middle;
+}
+
+.searchbar-style {
+    height: 80px;
+    margin-left: 280px;
+}
+
+.select-style {
+    width: 20%;
+}
+
+#searchbar {
+    width: 50%;
+}
+
+.grid-container {
+    display: grid;
+    width: 80%;
+    grid-template-columns: 280px 280px 280px;
+    justify-content: center;
+    margin: 2% auto;
+    grid-column-gap: 100px;
+    grid-row-gap: 50px;
+    grid-auto-rows: 300px;
+}
+
+.grid-container section {
+    border: 0.0625rem solid rgb(0, 0, 0);
+    border-radius: 4px;
+}
+
+.grid-container .details,
+.grid-container section img,
+#cartPage a {
+    display: block;
+}
+
+.grid-container section img {
+    height: 100%;
+    opacity: 1;
+    transition: 0.5s ease;
+    backface-visibility: hidden;
+}
+
+.grid-container section:hover img {
+    opacity: 0.3;
+}
+
+.grid-container section:hover,
+.cartItems>li:hover,
+#productPage section:hover {
+    box-shadow: 0 0 3px 2px rgb(0, 0, 0);
+}
+
+.grid-container section:hover .overlay {
+    opacity: 0.8;
+}
+
+.overlay {
+    width: 99%;
+    height: 99%;
+    transition: 0.5s ease;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #77635c;
+}
+
+.overlay ul {
+    margin-top: 50px;
+}
+
+.overlay li {
+    margin: 0 30px 10px 0;
+    color: #ffffff;
+}
+
+.grid-container .details {
+    padding: 10px;
+    margin: 10px auto;
+}
+
+.grid-container .details,
+.buy,
+#cartPage a {
+    width: 250px;
+}
+
+.buy,
+#cartPage a {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 8px;
+}
+
+.buy,
+#cartPage a,
+.grid-container .details {
+    border-radius: 7px;
+}
+
+#cartPage a {
+    margin: 16px auto;
+}
+
+.carousel-inner {
+    height: 362px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+footer {
+    height: 100%;
+    padding: 0px 150px;
+    display: flex;
+    gap: 150px;
+    align-items: flex-start;
+}
+
+.nav-footer-col {
+    padding: 20px;
+}
+
+.main-footer-style h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#cartPage {
+    width: 30%;
+    height: 85.8%;
+    z-index: 2;
+    border-top: 0;
+}
+
+.scroll {
+    overflow: auto;
+    height: 77%;
+}
+
+#productPage {
+    width: 60%;
+    top: 24%;
+    left: 20%;
+    z-index: 3;
+}
+
+.cartItems>li,
+#productPage section,
+#cartPage {
+    border: 1px solid #77635c;
+}
+
+.cart-total-price {
+    color: black;
+}
+
+.cartItems>li,
+#productPage section {
+    flex-basis: 95%;
+    margin: 16px 32px 16px 0;
+    padding: 8px;
+}
+
+#productPage section {
+    flex-wrap: wrap;
+    align-items: center;
+    flex-basis: 98%;
+}
+
+#cartPage h2,
+#productPage section {
+    padding: 16px;
+}
+
+.scroll .empty,
+.overlay,
+#cartPage a {
+    text-align: center;
+}
+
+.scroll p {
+    padding: 0 48px;
+}
+
+.scroll span,
+.cartItems>li li:last-child,
+#productPage section li:last-child {
+    float: right;
+}
+
+.cartItems>li img,
+#productPage section img {
+    flex-basis: 20%;
+}
+
+.cartItems>li img {
+    height: 88px;
+}
+
+#productPage section img {
+    height: 184px;
+}
+
+#productPage button {
+    position: relative;
+    left: 450px;
+}
+
+.cartItems>li ul,
+#productPage section ul {
+    flex-basis: 70%;
+}
+
+.cartItems>li li:last-child,
+#productPage section li:last-child {
+    margin-top: 16px;
+}
+
+.cartItems>li li:first-child,
+h3,
+#productPage section li:first-child,
+#productPage .price,
+.scroll p,
+.buy,
+#cartPage a,
+.search-icon::before,
+.login-icon::before,
+.cart-icon::before {
+    font-weight: bold;
+}
+
+.cartItems>li li:nth-child(2),
+#productPage section li:nth-child(2) {
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.info,
+.total,
+#productPage,
+#cartPage,
+h1,
+.searchbar-style {
+    display: none;
+}
+
+#close {
+    width: 30px;
+    top: 2px;
+    z-index: 10;
+}
+
+#productPage button,
+#close {
+    right: 16px;
+}
+
+@media only screen and (max-width: 769px) {
+    /* For mobile phones and ipads: */
+    .grid-container {
+        grid-template-columns: auto auto;
+        /*responsive grid system*/
+    }
+    #cartPage {
+        width: 50%;
+        height: 100%;
+    }
+    .searchbar-style {
+        margin-left: 140px;
+    }
+    .carousel-inner {
+        height: 250px;
+        width: 100%;
+    }
+    .nav-footer-col p {
+        position: relative;
+        right: 10px;
+    }
+    .nav-footer-col {
+        padding: 8px 0 0 30px;
+    }
+    .nav-footer-col li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+    #productPage button {
+        left: 440px;
+    }
+    #productPage {
+        width: 100%;
+        top: 15%;
+        left: 1.5%;
+    }
+    #productPage section img,
+    #productPage section ul {
+        flex-basis: 50%;
+    }
+    #productPage section img {
+        height: 320px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    /* For mobile phones: */
+    header img {
+        height: 40px;
+        width: 80px;
+        margin: 0 10px 10px 10px;
+        padding-left: 10px;
+    }
+    .search-icon::before,
+    .login-icon::before,
+    .cart-icon::before {
+        top: 0;
+    }
+    .searchbar-style {
+        margin-left: 40px;
+    }
+    #searchbar {
+        width: 60%;
+    }
+    #cartPage {
+        width: 100%;
+    }
+    .grid-container {
+        /*responsive grid system*/
+        grid-template-columns: auto;
+        margin: 5% auto;
+    }
+    .carousel-inner {
+        height: 150px;
+    }
+    .nav-footer-col {
+        display: block;
+    }
+    #cartPage {
+        height: 89.5%;
+    }
+    #productPage {
+        width: 100%;
+        top: 15%;
+        left: 3.5%;
+    }
+    #productPage section {
+        height: 50%;
+    }
+    #productPage section img,
+    #productPage section ul {
+        flex-basis: 100%;
+    }
+    #productPage section img {
+        height: 200px;
+    }
+    #productPage section ul {
+        margin: 0;
+        padding: 0;
+    }
+    #productPage button {
+        left: 30px;
+    }
+}
